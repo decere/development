@@ -1,0 +1,1 @@
+grep --color=always -s -rIwn "$1" * | grep -v "\.git"

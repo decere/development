@@ -1,0 +1,25 @@
+DATA_DIR=/data/matt
+SRC_DIR=/data/matt/src
+
+#private bin directory is now kind of default path
+#export MY_BIN=~/bin
+
+export SDK_ROOT=${DATA_DIR}/android-sdk-linux
+export ARM_BIN=${SRC_DIR}/jb-4.1.1_r1/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin
+# Temporarily blocked
+#export JAVA_HOME=${DATA_DIR}/jdk1.6.0_33
+
+# CCache
+# cache size configuration: $ prebuilt/linux-x86/ccache/ccache -M 50G
+#export USE_CCACHE=1
+#export CCACHE_DIR=${DATA_DIR}/ccache
+
+PATH=$SDK_ROOT/tools:$SDK_ROOT/platform-tools:$ARM_BIN:$JAVA_HOME/bin:$PATH
+
+PATH=${DATA_DIR}/eclipse:$PATH
+
+#export CHROMIUM_BIN=~/DK/depot_tools
+#PATH=$CHROMIUM_BIN:$PATH
+
+#export PS1="\u@\H:\w\$ "
+export PS1="\e[33m\u: \w\$ \e[m"

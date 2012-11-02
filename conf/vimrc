@@ -1,0 +1,77 @@
+set backspace=indent,eol,start
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autoindent
+set smartindent
+set cindent
+set hlsearch
+set pastetoggle=<F12>
+set history=10000
+set title
+set visualbell
+
+"backup
+set backup
+set backupdir=~/.vimback
+
+" goto previous(N)/next(n) page
+"map<F2> :N<CR>
+"map<F3> :n<CR>
+
+" set mark/goto mark
+"map<F2> mm:echo "marked"<CR>
+"map<F3> :echo "go to marked"<CR>`m
+
+" minibufexplorer
+" let g:miniBufExplMapWindowNavVim = 1
+" let g:miniBufExplMapWindowNavArrows = 1
+" let g:miniBufExplMapCTabSwitchBufs = 1
+" let g:miniBufExplModSelTarget = 1
+
+
+" ctags
+set tags+=./tags
+"set tags+=../tags
+"set tags+=../../tags
+"set tags+=../../../tags
+"set tags+=../../../../tags
+"set tags+=../../../../../tags
+"set tags+=../../../../../../tags
+"set tags+=../../../../../../../tags
+"set tags+=../../../../../../../../tags
+"set tags+=../../../../../../../../../tags
+set complete=.,w,b,u,t,i
+
+map<F2> :tj<CR>
+map<F3> :tn<CR>
+map<F4> :tp<CR>
+
+" compiler configuration
+set makeprg="javac %\"
+set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
+map ,n :cn<ENTER>
+map ,p :cp<ENTER>
+map ,l :cl<ENTER>
+map ,w :cw<ENTER>
+
+" TagList
+nnoremap <silent> <F8> :Tlist<CR>
+nnoremap <silent> <F9> :w<CR>:TlistUpdate<CR>
+let Tlist_Inc_Winwidth=0
+let Tlist_Use_Right_Window=1
+let Tlist_WinWidth=50
+
+" comment a block!
+vmap ,c :s/^/\/\//g<ENTER>
+vmap ,uc :s/^\/\///g<ENTER>
+
+" SingleCompile
+nmap <F5> :SCCompileRun<cr>
+nmap <F6> :SCCompile<cr>
+"let g:SingleCompile_showresultafterrun = 1
+let g:SingleCompile_usedialog = 1
+
+" copied from /etc/vim/vimrc
+source ~/.vimrc.etc
