@@ -4,3 +4,5 @@ git config --global user.email matt.shin@gmail.com
 git config --global color.ui true
 git config --global core.editor vim
 git config --global merge.tool meld
+
+#git clone https://git.chromium.org/chromium/tools/depot_tools.git

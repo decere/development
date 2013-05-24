@@ -8,8 +8,7 @@ echo done!
 
 echo -n finding source files...
 SRC_FILES=src.tag.files
-# TODO: include files under the following path
-# ./out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/src
+
 find . \
     ! \( -path ./out -prune \) \
     ! \( -path ./external/valgrind/main/memcheck/tests/match-overrun.c -prune \) \
@@ -28,6 +27,11 @@ find . \
     -name "Makefile" \
     \) \
     > ${SRC_FILES}
+
+find ./out/target/common/obj/JAVA_LIBRARIES \
+    -name "*.java" \
+    >> ${SRC_FILES}
+
 echo done!
 
 echo -n sorting tag files...

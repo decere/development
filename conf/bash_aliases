@@ -18,8 +18,8 @@ PATH=$SDK_ROOT/tools:$SDK_ROOT/platform-tools:$ARM_BIN:$JAVA_HOME/bin:$PATH
 
 PATH=${DATA_DIR}/eclipse:$PATH
 
-#export CHROMIUM_BIN=~/DK/depot_tools
-#PATH=$CHROMIUM_BIN:$PATH
+export CHROMIUM_BIN=~/bin/depot_tools
+PATH=$CHROMIUM_BIN:$PATH
 
 #export PS1="\u@\H:\w\$ "
 export PS1="\e[33m\u: \w\$ \e[m"

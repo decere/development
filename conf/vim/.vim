@@ -1,1 +1,0 @@
-/data/matt/conf/.vim
