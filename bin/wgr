@@ -1,1 +1,1 @@
-grep --color=always -s -rIwn "$1" * | grep -v "\.git"
+grep --color=always --exclude=tags --exclude=cscope.out --exclude-dir=.git -s -rIwn "$1" *
