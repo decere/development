@@ -1,7 +1,6 @@
 #!/bin/bash
 
-DATA_DIR=/data/matt
-DEVELOPMENT_DIR=${DATA_DIR}/development
+source conf.sh
 CONF_DIR=${DEVELOPMENT_DIR}/conf
 
 ln -sfn ${CONF_DIR}/vim ~/.vim
